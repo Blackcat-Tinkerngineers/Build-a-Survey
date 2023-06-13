@@ -4,69 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build a Survey-Form</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Superhero Survey Form</title>
+    <link rel="icon" href="./css/img/black-cat.png" type="image/x-icon"/>
+    <!-- <a href="https://www.flaticon.com/free-icons/black-cat" title="black cat icons">Black cat icons created by juicy_fish - Flaticon</a>-->
+    <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
 <body>
-    <h1 id="title">Superhero Survey-Form</h1>
-
-    <p id="description">We appreciate your time spent assisting us in enhancing the platform.</p>
+    <div class="container">
+        <header class="header">
+    <h1 id="title" class="text-center">Superhero Survey Form</h1>
+    <p id="description" class="description text-center"> We appreciate your time spent assisting us in enhancing the platform.</p>
+</header>
 
 <form id="survey-form">
-<fieldset>
-<label id="name-label" for="name">Enter Your Name: <input id="name" type="text" required/>
-</label>,
-<br>
+<div class="form-group">
+<label id="name-label" for="name">Name</label>
+<input id="name" name="name" type="text" placeholder="Enter your name" class="form-control" required/>
+</div>
+<div class="form-group">
+<label id="email-label" for="email">Email</label>
+<input id="email" name="email" type="email" Placeholder="Enter your email" class="form-control" required/>
+</div>
+<div class="form-group">
+<label id="number-label" for="number">Age<span class="clue">(Optional)</span></label>
+<input id="number" name="age" type="number" min="10" max="99" placeholder="Age" class="form-control"/>
+</div>
 
-<label id="email-label"for="email">Enter Your Email: <input id="email" type="email" required/>
-</label>,
-<br>
-
-<label id="number-label" for="number">Enter a Number: <input id="number" type="number" min="12" max="15" required/>,
-</label>
-<br>
-</fieldset>
-
-<fieldset>
-<p>If you could have any superpower, what would it rather be?
+<div class="form-group">
+<p>If you could have any superpower, what would you rather it be?</p>
 <label for="flying">
-    <input type="radio" name="superpower-type" value="flying"/>Flying</label>
+    <input type="radio" name="superpower-type" value="flying" class="input-radio" checked/>Flying</label>
 <label for="time-travel">
-    <input type="radio" name="superpower-type" value="time-travel"/>Time Travel</label>
-<label for="superhuman-strength">Superhuman Strength
-    <input type="radio" name="superpower-type" value="superhuman-strength"/>
+    <input type="radio" name="superpower-type" value="time-travel" class="input-radio"/>Time Travel</label>
+<label for="superhuman-strength">
+    <input type="radio" name="superpower-type" value="superhuman-strength" class="input-radio"/>Superhuman Strength
 </label>
 <label for="healing">
-    <input type="radio" name="superpower-type" value="healing"/>Healing
+    <input type="radio" name="superpower-type" value="healing" class="input-radio"/>Healing
 </label>
 <label for="invisibility">
-    <input type="radio" name="superpower-type" value="invisibility"/>Invisibility
+    <input type="radio" name="superpower-type" value="invisibility" class="input-radio"/>Invisibility
 </label>
 <label for="speak-to-animals">
-    <input type="radio" name="superpower-type" value="speak-to-animals"/>Speak to Animals
+    <input type="radio" name="superpower-type" value="speak-to-animals" class="input-radio"/>Speak to Animals
 </label>
-</p>
-</fieldset>
+</div>
 
-<fieldset>
-
-<p>If you could have a sidekick, who would it rather be?
+<div class="form-group">
+<p>If you could have a sidekick, who would it rather be?</p>
 <label for="dick-grayson">
-<input type="checkbox" name="sidekick-type" required/>Dick Grayson (Robin)</label>
+<input type="checkbox" name="sidekick-type" value="dick-grayson" class="input-checkbox"/>Dick Grayson (Robin)</label>
 <label for="harley-quinn">
-<input type="checkbox" name="sidekick-type" required/>Harley Quinn</label>
+<input type="checkbox" name="sidekick-type" value="harley-quinn" class="input-checkbox"/>Harley Quinn</label>
 <label for="bucky-barnes">
-<input type="checkbox" name="sidekick-type" required/>Bucky Barnes</label>
+<input type="checkbox" name="sidekick-type" value="bucky-barnes" class="input-checkbox"/>Bucky Barnes</label>
 <label for="kid-flash">
-<input type="checkbox" name="sidekick-type" required/>Kid Flash</label>
+<input type="checkbox" name="sidekick-type" value="kid-flash" class="input-checkbox"/>Kid Flash</label>
 <label for="wonder-girl">
-<input type="checkbox" name="sidekick-type" required/>Wonder Girl
+<input type="checkbox" name="sidekick-type" value="wonder-girl" class="input-checkbox"/>Wonder Girl
 </label>
-</p>
-<fieldset>
-    <label for="cape-color">Pick your cape color: 
-    <select id="cape-color" type="dropdown">
-        <option>(Select One) </option>
+</div>
+
+<div class="form-group">
+    <p>Pick your cape color</p>
+    <select id="dropdown" name="cape" class="form-control" required>
+        <option disabled selected value>Select </option>
           <option value="yellow">Yellow</option>
           <option value="red">Red</option>
           <option value="blue">Blue</option>
@@ -74,20 +76,19 @@
           <option value="black">Black</option>
           <option value="white">White</option>
         </select>
-        </label>
-</fieldset>
-<fieldset>
-    <label for="superhero-slogan">Enter your superhero slogan:
-        <textarea id="superhero-slogan"></textarea>
-    </label>
-</fieldset>
+    </div>
+
+<div class="form-group">
+    <p for="superhero-slogan">Superhero Slogan</p> 
+        <textarea id="superhero-slogan" placeholder="Enter your slogan here..."></textarea>
+</div>
       <input id="submit" type="submit">
       
 </form>
 
-    
+</div>  
 </body>
-<footer>
-    
+<footer class="page-footer">
+    Made with ❤️ by<a href="https://github.com/Blackcat-Tinkerngineers/Build-a-Survey-Form"> Blackcat-Tinkerngineers</a>
 </footer>
 </html>
