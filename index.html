@@ -6,15 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build a Survey-Form</title>
     <link rel="stylesheet" href="/styles.css">
-
-    
 </head>
 <body>
-    <h1 id="title">Build a Survey-Form</h1>
+    <h1 id="title">Superhero Survey-Form</h1>
 
     <p id="description">We appreciate your time spent assisting us in enhancing the platform.</p>
 
-    <form action="survey-form"></form>
+<form id="survey-form">
+<fieldset>
+<label id="name-label" for="name">Enter Your Name: <input id="name" type="text" required/>
+</label>,
+<br>
+
+<label id="email-label"for="email">Enter Your Email: <input id="email" type="email" required/>
+</label>,
+<br>
+
+<label id="number-label" for="number">Enter a Number: <input id="number" type="number" min="12" max="15" required/>,
+</label>
+<br>
+</fieldset>
+
+<fieldset>
+<p>If you could have any superpower, what would it rather be?
+<label for="flying">
+    <input type="radio" name="superpower-type" value="flying"/>Flying</label>
+<label for="time-travel">
+    <input type="radio" name="superpower-type" value="time-travel"/>Time Travel</label>
+<label for="superhuman-strength">Superhuman Strength
+    <input type="radio" name="superpower-type" value="superhuman-strength"/>
+</label>
+<label for="healing">
+    <input type="radio" name="superpower-type" value="healing"/>Healing
+</label>
+<label for="invisibility">
+    <input type="radio" name="superpower-type" value="invisibility"/>Invisibility
+</label>
+<label for="speak-to-animals">
+    <input type="radio" name="superpower-type" value="speak-to-animals"/>Speak to Animals
+</label>
+</p>
+</fieldset>
+
+<fieldset>
+
+<p>If you could have a sidekick, who would it rather be?
+<label for="dick-grayson">
+<input type="checkbox" name="sidekick-type" required/>Dick Grayson (Robin)</label>
+<label for="harley-quinn">
+<input type="checkbox" name="sidekick-type" required/>Harley Quinn</label>
+<label for="bucky-barnes">
+<input type="checkbox" name="sidekick-type" required/>Bucky Barnes</label>
+<label for="kid-flash">
+<input type="checkbox" name="sidekick-type" required/>Kid Flash</label>
+<label for="wonder-girl">
+<input type="checkbox" name="sidekick-type" required/>Wonder Girl
+</label>
+</p>
+<fieldset>
+    <label for="cape-color">Pick your cape color: 
+    <select id="cape-color" type="dropdown">
+        <option>(Select One) </option>
+          <option value="yellow">Yellow</option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+        </select>
+        </label>
+</fieldset>
+<fieldset>
+    <label for="superhero-slogan">Enter your superhero slogan:
+        <textarea id="superhero-slogan"></textarea>
+    </label>
+</fieldset>
+      <input id="submit" type="submit">
+      
+</form>
 
     
 </body>
